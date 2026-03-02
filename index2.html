@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dr. Amit Sawant – Webpage</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --logo-blue: #003366;      /* Primary Navy from Logo */
+        --logo-gold: #FFD700;      /* Primary Gold from Logo */
+        --midnight-slate: #1B2631; /* Blue-based Neutral */
+        --bg-subtle: #F8FAFC;      /* Light background */
+        --text-dark: #2C3E50;      /* Softened dark text */
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background: var(--bg-subtle);
+        color: var(--text-dark);
+        line-height: 1.6;
+    }
+
+    /* --- BRANDED TIGHTER BANNER --- */
+    header {
+        background: linear-gradient(135deg, #001f3f 0%, var(--logo-blue) 100%);
+        color: white;
+        padding: 12px 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 4px solid var(--logo-gold);
+    }
+
+    .brand-area {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo-container {
+        background: white;
+        padding: 4px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .logo-img {
+        height: 40px;
+        width: auto;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+    }
+
+    /* --- SLEEK NAV BAR --- */
+    nav {
+        background: var(--midnight-slate);
+        padding: 0 5%;
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    nav a {
+        color: #ced4da;
+        padding: 14px 20px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 13px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+    }
+
+    nav a:hover {
+        color: var(--logo-gold);
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    nav a.active {
+        color: white;
+        border-bottom: 3px solid var(--logo-gold);
+    }
+
+    /* --- CONTENT AREA --- */
+    .container {
+        max-width: 1000px;
+        margin: 40px auto;
+        background: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    h3 {
+        color: var(--logo-blue);
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 8px;
+        margin-top: 35px;
+        font-size: 22px;
+    }
+
+    ul {
+        padding-left: 20px;
+        list-style-type: square;
+    }
+
+    li {
+        margin-bottom: 12px;
+    }
+
+    a {
+        color: var(--logo-blue);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    /* --- SOCIAL MEDIA TABLE --- */
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .social-link img {
+        transition: transform 0.2s;
+        border-radius: 4px;
+    }
+
+    .social-link img:hover {
+        transform: scale(1.1);
+    }
+
+    footer {
+        background: var(--midnight-slate);
+        color: #a0aec0;
+        padding: 40px 20px;
+        text-align: center;
+        font-size: 12px;
+        border-top: 4px solid var(--logo-gold);
+    }
+
+    footer strong {
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="brand-area">
+        <div class="logo-container">
+            <img src="images/Sawant_Group_logo.PNG" alt="Sawant Group Logo" class="logo-img">
+        </div>
+        <h1>Dr. Amit Sawant - Webpage</h1>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="Advisory_Services.html">Advisory Services</a>
+    <a href="Portfolio.html">Portfolio</a>
+    <a href="Leadership.html">Leadership</a>
+    <a href="Publications.html">Publications</a>
+    <a href="Resources.html">Resources</a>
+</nav>
+
+<div class="container">
+
+    <p>
+        <img src="images/Amit_Sawant.JPG" width="200" align="left" style="margin-right:20px;">
+        <b>Product & Business Leader | The “DATA” Guy</b><br><br>
+        I am a visionary and award-winning product leader with a remarkable track record of driving innovation and delivering groundbreaking solutions across enterprise and consumer domains. My expertise spans analytics, AI/ML, IoT, data management, and cybersecurity, coupled with strategic thought leadership, cross-functional collaboration, and adept negotiation skills. I bring deep industry experience across high-tech, healthtech, and real estate, enabling cross-pollination of ideas and best practices that deliver transformative business outcomes.
+    </p>
+
+    <p>
+        I currently serve as an Entrepreneur in Residence at 
+        <a href="https://ncinnovation.org">NCInnovation</a>, leading commercialization strategies for university-funded MedTech innovations. As Chief Product & Operating Officer at Somatix, I spearhead the company’s product, business, and corporate strategy. I led Somatix’s competitive selection into elite accelerator programs including T-Mobile for Wellness Tech, LG NOVA Mission to the Future, H+ Digital Health, and Roche Innovation in Dementia.
+    </p>
+
+    <p>
+        My experience spans Dell Technologies, Riverbed Technology, NetApp, and Tata Consultancy Services. At Dell, I drove $2.4B in annual revenue for Data Protection products, earning the Dell Champion Award and leading DP4400 to “Product of the Year.” At Riverbed, I managed SteelFusion ($100M annual revenue, 230% YoY growth). At NetApp, I led product marketing for SnapMirror ($900M) and SnapVault ($300M) and established NetApp’s partnership with the NFL.
+    </p>
+
+    <p>
+        I actively mentor leaders through <a href="https://www.platohq.com/mentors/anit-sawant-879845115">Plato</a>, 
+        <a href="https://www.alchemistaccelerator.com/">Alchemist Accelerator</a>, 
+        <a href="https://www.productcamprtp.org/meet-the-team">ProductCampRTP</a>, 
+        <a href="https://productleague.com/">Product League</a>, and 
+        <a href="https://adplist.org/mentors/amit-sawant">ADPlist</a>.  
+        I support startups via NCInnovation, CED, NSF I‑Corps, IIT‑Startups, and VJTI‑TBI, and consult for Fortune 500 clients through Coleman Research, GLG Insights, Third Bridge, Dialectica, Lynx, and PennPAC.
+    </p>
+
+    <p>
+        I hold an MBA from The Wharton School, a Ph.D. and M.S. in Computer Science from NC State University, and a B.S. from VJTI. I have delivered 100+ keynotes and authored 35+ peer‑reviewed publications in IEEE Visualization, SuperComputing, and ACM Applied Perception.
+    </p>
+
+    <h3>Downloads</h3>
+    <ul>
+        <li><b>Resume (short form):</b> <a href="https://docs.google.com/document/d/12xBP1XEbFWdRudNEKR9rvjJJgrag8aCw/edit">WORD</a> | <a href="https://drive.google.com/file/d/1oIVs0-T108igyw2r2eaD8XfaFLmRlEQa/view">PDF</a></li>
+        <li><b>Resume (long form):</b> <a href="https://docs.google.com/document/d/1bVgjpDOlZseGSro2_ggr3Hn4cc5Gs-IF/edit">WORD</a> | <a href="https://drive.google.com/file/d/1o-V0BNc6GNOW6r1rDQLT0vtci6JlASB8/view">PDF</a></li>
+        <li><b>Executive Bio:</b> <a href="https://docs.google.com/document/d/1nKXNWF3cmFHzxX3LdmkD_JiNUUKb8B4L/edit">WORD</a> | <a href="https://drive.google.com/file/d/1L1D18avMCIn0MybkRB6WxgNkonFOx6mU/view">PDF</a></li>
+        <li><b>Intro Slides:</b> <a href="https://docs.google.com/presentation/d/1NOYChsB1_lZQxBZDPFNYFXZcG4Aq1vow/edit">PPTX</a> | <a href="https://drive.google.com/file/d/1ej07SwIB_mjoOg0tNXtUtBxWimZDOyDc/view">PDF</a></li>
+    </ul>
+
+    <p>If you would like to have a conversation, schedule time on my calendar — <a href="https://calendly.com/apsawant">https://calendly.com/apsawant</a>.</p>
+
+    <h3>News</h3>
+    <ul>
+        <li>Nov 2025 — Keynote: <a href="https://drive.google.com/file/d/13keT5afHKPS3SmaEviH7839JRmMy8Uuu">AI‑powered Predictive Care</a> at the <a href="https://gloriumtech.com/global-healthtech-summit-2025/">Health Tech 2025–2026 Summit</a></li>
+        <li>Sep 2025 — Keynote: <b>The Intelligent Edge</b> at <a href="https://www.ncciq.com/reshaped-2025">Reshaped 2025 (AI × Real Estate)</a></li>
+        <li>Apr 2025 — Selected as a member of the <a href="https://ncer.clubexpress.com">North Carolina Executive Roundtable</a></li>
+        <li>Press Release — <a href="https://www.newswire.com/news/somatix-and-roche-launch-an-only-of-its-kind-medication-compliance-22080749">Somatix & Roche Launch AI‑Enabled Medication Compliance Capability</a></li>
+    </ul>
+
+    <img src="images/Countries_and_States_visited_2022.PNG" width="700">
+    <img src="images/Sports_Teams.PNG" width="700">
+
+    <h3>Social Media</h3>
+    <table>
+      <tr>
+        <td><a href="http://www.linkedin.com/company/sawant-group-llc/"><img src="images/Sawant_Group_logo.PNG" width="50"></a></td>
+        <td><a href="http://www.linkedin.com/in/apsawant/"><img src="images/linkedin_logo.jpg" width="50"></a></td>
+        <td><a href="https://x.com/apsawant"><img src="images/X_logo.PNG" width="50"></a></td>
+        <td><a href="https://instagram.com/apsawant19"><img src="images/Instagram_logo.PNG" width="50"></a></td>
+        <td><a href="https://www.youtube.com/channel/UC7LkyeZ5MqLxpZL9naMs4ZA"><img src="images/Podcast_logo.PNG" width="50"></a></td>
+        <td><a href="https://substack.com/@apsawant19"><img src="images/Sawant_POV.png" width="124"></a></td>
+        <td><a href="https://calendly.com/apsawant"><img src="images/calendly-logo.png" width="124"></a></td>
+      </tr>
+    </table>
+
+    <p>My <a href="http://www.oakland.edu/enp/">Erdős Number</a> is 4.</p>
+
+</div>
+
+<footer>
+    © Dr. Amit Sawant — Webpage
+</footer>
+
+</body>
+</html>
