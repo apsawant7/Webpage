@@ -11,8 +11,8 @@
         --logo-blue: #003366;      /* Primary Navy from Logo */
         --logo-gold: #FFD700;      /* Primary Gold from Logo */
         --midnight-slate: #1B2631; /* Blue-based Neutral */
-        --bg-subtle: #F8FAFC;      /* Soft background */
-        --text-dark: #2C3E50;      /* Midnight Slate text (better than pure black) */
+        --bg-subtle: #F8FAFC;      /* Light background */
+        --text-dark: #2C3E50;      /* Softened dark text */
     }
 
     body {
@@ -27,7 +27,7 @@
     header {
         background: linear-gradient(135deg, #001f3f 0%, var(--logo-blue) 100%);
         color: white;
-        padding: 15px 5%;
+        padding: 12px 5%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -42,7 +42,7 @@
 
     .logo-container {
         background: white;
-        padding: 5px;
+        padding: 4px;
         border-radius: 4px;
         display: flex;
         align-items: center;
@@ -56,9 +56,9 @@
 
     header h1 {
         margin: 0;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 700;
-        letter-spacing: -0.5px;
+        letter-spacing: -0.3px;
     }
 
     /* --- SLEEK NAV BAR --- */
@@ -75,7 +75,7 @@
 
     nav a {
         color: #ced4da;
-        padding: 15px 22px;
+        padding: 14px 20px;
         text-decoration: none;
         font-weight: 600;
         font-size: 13px;
@@ -104,21 +104,17 @@
         box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
 
-    h2, h3 {
+    h3 {
         color: var(--logo-blue);
         border-bottom: 2px solid #edf2f7;
-        padding-bottom: 10px;
-        margin-top: 30px;
-    }
-
-    .intro-text {
-        font-size: 18px;
-        color: #4a5568;
-        margin-bottom: 30px;
+        padding-bottom: 8px;
+        margin-top: 35px;
+        font-size: 22px;
     }
 
     ul {
         padding-left: 20px;
+        list-style-type: square;
     }
 
     li {
@@ -133,45 +129,42 @@
 
     a:hover {
         text-decoration: underline;
-        color: #004080;
     }
 
-    /* --- SOCIAL MEDIA GRID --- */
-    .social-grid {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
+    /* --- SOCIAL MEDIA TABLE --- */
+    table {
+        width: 100%;
         margin-top: 20px;
-        padding: 20px;
-        background: #fcfcfc;
-        border-radius: 8px;
-        border: 1px solid #eee;
+        border-collapse: collapse;
     }
 
-    .social-icon {
-        transition: transform 0.2s;
+    td {
+        padding: 10px;
+        text-align: center;
     }
 
-    .social-icon:hover {
-        transform: scale(1.1);
-    }
-
-    /* --- IMAGES --- */
-    .hero-img {
+    img {
         max-width: 100%;
         height: auto;
         border-radius: 8px;
-        margin: 20px 0;
+    }
+
+    .social-link img {
+        transition: transform 0.2s;
+        border-radius: 4px;
+    }
+
+    .social-link img:hover {
+        transform: scale(1.1);
     }
 
     footer {
         background: var(--midnight-slate);
         color: #a0aec0;
-        padding: 50px 20px;
+        padding: 40px 20px;
         text-align: center;
-        font-size: 13px;
+        font-size: 12px;
         border-top: 4px solid var(--logo-gold);
-        margin-top: 60px;
     }
 
     footer strong {
@@ -200,9 +193,7 @@
 </nav>
 
 <div class="container">
-    <p class="intro-text">
-        Welcome to my portfolio archive. I am a technology leader and product strategist specializing in AI, healthcare innovation, and digital transformation.
-    </p>
+    <p>Welcome to my portfolio archive. I am a technology leader and product strategist specializing in AI, healthcare innovation, and digital transformation.</p>
 
     <h3>Current Highlights</h3>
     <ul>
@@ -212,18 +203,23 @@
         <li>Press Release — <a href="https://www.newswire.com/news/somatix-and-roche-launch-an-only-of-its-kind-medication-compliance-22080749">Somatix & Roche Launch AI‑Enabled Medication Compliance Capability</a></li>
     </ul>
 
-    <img src="images/Countries_and_States_visited_2022.PNG" class="hero-img" alt="Travel Map">
-    <img src="images/Sports_Teams.PNG" class="hero-img" alt="Sports Teams">
-
-    <h3>Connect With Me</h3>
-    <div class="social-grid">
-        <a href="http://www.linkedin.com/company/sawant-group-llc/" class="social-icon"><img src="images/Sawant_Group_logo.PNG" width="50" alt="Sawant Group"></a>
-        <a href="http://www.linkedin.com/in/apsawant/" class="social-icon"><img src="images/linkedin_logo.jpg" width="50" alt="LinkedIn"></a>
-        <a href="https://x.com/apsawant" class="social-icon"><img src="images/X_logo.PNG" width="50" alt="X"></a>
-        <a href="https://instagram.com/apsawant19" class="social-icon"><img src="images/Instagram_logo.PNG" width="50" alt="Instagram"></a>
-        <a href="https://www.youtube.com/channel/UC7LkyeZ5MqLxpZL9naMs4ZA" class="social-icon"><img src="images/Podcast_logo.PNG" width="50" alt="YouTube"></a>
-        <a href="https://substack.com/@apsawant" class="social-icon"><img src="images/Substack_logo.png" width="50" alt="Substack"></a>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="images/Countries_and_States_visited_2022.PNG" width="700" alt="Countries Visited">
+        <br><br>
+        <img src="images/Sports_Teams.PNG" width="700" alt="Sports Teams">
     </div>
+
+    <h3>Social Media</h3>
+    <table>
+      <tr>
+        <td><a href="http://www.linkedin.com/company/sawant-group-llc/" class="social-link"><img src="images/Sawant_Group_logo.PNG" width="50"></a></td>
+        <td><a href="http://www.linkedin.com/in/apsawant/" class="social-link"><img src="images/linkedin_logo.jpg" width="50"></a></td>
+        <td><a href="https://x.com/apsawant" class="social-link"><img src="images/X_logo.PNG" width="50"></a></td>
+        <td><a href="https://instagram.com/apsawant19" class="social-link"><img src="images/Instagram_logo.PNG" width="50"></a></td>
+        <td><a href="https://www.youtube.com/channel/UC7LkyeZ5MqLxpZL9naMs4ZA" class="social-link"><img src="images/Podcast_logo.PNG" width="50"></a></td>
+        <td><a href="https://substack.com/@apsawant" class="social-link"><img src="images/Substack_logo.png" width="50"></a></td>
+      </tr>
+    </table>
 </div>
 
 <footer>
