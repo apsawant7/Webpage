@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Dr. Amit Sawant – Publications</title>
+<title>Dr. Amit Sawant – Advisory Services</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Modern executive font -->
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
     :root {
         --logo-blue: #003366;      /* Primary Navy from Logo */
         --logo-gold: #FFD700;      /* Primary Gold from Logo */
-        --midnight-slate: #1B2631; /* Better Neutral: Midnight Slate */
+        --midnight-slate: #1B2631; /* Blue-based Neutral */
         --bg-subtle: #F8FAFC;      /* Light background */
         --text-dark: #2C3E50;      /* Softened dark text */
     }
@@ -24,7 +23,7 @@
         line-height: 1.6;
     }
 
-    /* --- SLEEK TIGHTER BANNER --- */
+    /* --- BRANDED TIGHTER BANNER --- */
     header {
         background: linear-gradient(135deg, #001f3f 0%, var(--logo-blue) 100%);
         color: white;
@@ -62,7 +61,7 @@
         letter-spacing: -0.3px;
     }
 
-    /* --- SLEEK NAV BAR (Midnight Slate) --- */
+    /* --- SLEEK NAV BAR --- */
     nav {
         background: var(--midnight-slate);
         padding: 0 5%;
@@ -95,88 +94,49 @@
         border-bottom: 3px solid var(--logo-gold);
     }
 
-    /* --- FILTERS --- */
-    .filter-bar {
+    /* --- CONTENT AREA (Spacing matched to index.html) --- */
+    .container {
+        max-width: 1000px;
+        margin: 40px auto;
         background: white;
-        padding: 18px 5%;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        border-bottom: 1px solid #edf2f7;
+        padding: 40px; /* Internal spacing from edge to first letter */
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
 
-    .filter-bar input, .filter-bar select {
-        padding: 10px 15px;
-        border: 2px solid #edf2f7;
-        border-radius: 6px;
-        font-family: inherit;
-        flex: 1;
-        min-width: 180px;
-        outline: none;
-        transition: border-color 0.3s;
-    }
-
-    .filter-bar input:focus {
-        border-color: var(--logo-blue);
-    }
-
-    /* --- PUBLICATIONS GRID --- */
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        gap: 20px;
-        padding: 25px 5%;
-    }
-
-    .card {
-        background: white;
-        border-radius: 10px;
-        padding: 22px;
-        border-top: 4px solid var(--logo-blue);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        transition: 0.3s;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 20px rgba(0,51,102,0.1);
-        border-top-color: var(--logo-gold);
-    }
-
-    .card h3 {
-        margin: 0 0 10px 0;
-        font-size: 17px;
+    h3 {
         color: var(--logo-blue);
-        line-height: 1.4;
+        border-bottom: 2px solid #edf2f7;
+        padding-bottom: 8px;
+        margin-top: 35px;
+        font-size: 22px;
     }
 
-    .card a {
-        color: inherit;
-        text-decoration: none;
+    ul {
+        padding-left: 20px;
+        list-style-type: square;
     }
 
-    .card a:hover {
-        text-decoration: underline;
-        color: var(--logo-blue);
-    }
-
-    .meta {
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #718096;
+    li {
         margin-bottom: 12px;
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid #f7fafc;
-        padding-bottom: 6px;
     }
 
-    .desc {
-        font-size: 13.5px;
-        color: #4a5568;
+    a {
+        color: var(--logo-blue);
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+        margin: 20px 0; /* Aligned left with text */
     }
 
     footer {
@@ -200,13 +160,13 @@
         <div class="logo-container">
             <img src="images/Sawant_Group_logo.PNG" alt="Sawant Group Logo" class="logo-img">
         </div>
-        <h1>Advisory Services</h1>
+        <h1>Dr. Amit Sawant</h1>
     </div>
 </header>
 
 <nav>
     <a href="index.html">Home</a>
-    <a href="Advisory_Services.html">Advisory Services</a>
+    <a href="Advisory_Services.html" class="active">Advisory Services</a>
     <a href="Portfolio.html">Portfolio</a>
     <a href="Leadership.html">Leadership</a>
     <a href="Publications.html">Publications</a>
@@ -214,32 +174,10 @@
 </nav>
 
 <div class="container">
-
-    <h3><b>My Career Evolution</b></h3>
-    <img src="images/Amit_Career_Evolution.PNG" alt="Career Evolution">
-
-    <h3><b>Areas of Product, Market, and Domain Expertise</b></h3>
-    <img src="images/Amit_Product_Market_Domain.PNG" alt="Product Market Domain Expertise">
-
-    <p>
-        Organizations currently or formerly associated with: Faculty at 
-        <a href="https://www.productleadership.com/">Institute of Product Leadership</a>, 
-        Executive in Residence with North Carolina State University's 
-        <a href="https://research.ncsu.edu/commercialization/">Office of Technology Commercialization and New Ventures</a>, 
-        Venture Mentor at <a href="https://research.ncsu.edu/commercialization/nsf-i-corps/">NSF I-Corps</a>, 
-        and Advisor at <a href="https://vjti-tbi.in/mentors.php">VJTI Technology Business Incubator</a>, 
-        <a href="https://www.optimumdataanalytics.com/">Optimum Data Analytics</a>, 
-        <a href="https://www.ungraytech.com/">Ungray</a>, 
-        <a href="https://pennpac.org/">PennPAC</a>, and 
-        <a href="https://www.tsvanalytics.com/">TSV Analytics</a>.
-    </p>
-
-    <h3><b>Areas of Career Coaching</b></h3>
-    <img src="images/Amit_Career_Coaching.PNG" alt="Career Coaching">
-
-    <h3><b>Some of my personal stories</b></h3>
+    <h3><b>Guidance and Mentorship</b></h3>
     <ul>
-        <li><a href="https://drive.google.com/file/d/1PaFBpKGuE91DgDqtFRF-7CR932v_cvZP/view?usp=drivesdk">Keeping Your Team Motivated and Connected in the Midst of Pandemic</a></li>
+        <li><a href="https://drive.google.com/file/d/13N2R-u64vS0_F3W6rG9lO7N6S4f8Y6X0/view?usp=drivesdk">The Art of Storytelling for Product Managers</a></li>
+        <li><a href="https://drive.google.com/file/d/1XWgpKGuE91DgDqtFRF-7CR932v_cvZP/view?usp=drivesdk">Keeping Your Team Motivated and Connected in the Midst of Pandemic</a></li>
         <li><a href="https://drive.google.com/file/d/15gLXCfYZ9N-JYOXF7dL61XG5edCObfLu/view?usp=drivesdk">Helping Engineers Become Well-Rounded Product Managers</a></li>
         <li><a href="https://drive.google.com/file/d/1lxvXqfH2o0lM6AGFJba3RlNngacqlIg5/view?usp=drivesdk">How Data Made Me More Confident to Drive Big Decisions</a></li>
         <li><a href="https://www.youtube.com/watch?v=Bauz7dKGGjY">Amit Sawant: The SuperHero – A Tribute by his team at Dell Technologies</a></li>
@@ -256,16 +194,10 @@
 
     <h3><b>My association with various Institutions and Organizations</b></h3>
     <img src="images/Amit_associated_orgs.PNG" width="800" alt="Associated Organizations">
-
-    <p>
-        If you need any help, please feel free to email me at <b>apsawant@gmail.com</b> or schedule a time on my calendar:  
-        <a href="https://calendly.com/apsawant">https://calendly.com/apsawant</a>.
-    </p>
-
 </div>
 
 <footer>
-    © Dr. Amit Sawant — Webpage
+    © Dr. Amit Sawant - Webpage
 </footer>
 
 </body>
