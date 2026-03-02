@@ -4,131 +4,204 @@
 <meta charset="UTF-8">
 <title>Dr. Amit Sawant – Publications</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Modern executive font -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+    :root {
+        --logo-blue: #003366;      /* Primary Navy from Logo */
+        --logo-gold: #FFD700;      /* Primary Gold from Logo */
+        --midnight-slate: #1B2631; /* Better Neutral: Midnight Slate */
+        --bg-subtle: #F8FAFC;      /* Light background */
+        --text-dark: #2C3E50;      /* Softened dark text */
+    }
+
     body {
         margin: 0;
-        font-family: "Inter", Arial, sans-serif;
-        background: #f7f7f7;
-        color: #222;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background: var(--bg-subtle);
+        color: var(--text-dark);
         line-height: 1.6;
     }
 
+    /* --- SLEEK TIGHTER BANNER --- */
     header {
-        background: linear-gradient(135deg, #800000, #4d0000);
+        background: linear-gradient(135deg, #001f3f 0%, var(--logo-blue) 100%);
         color: white;
-        padding: 60px 20px;
-        text-align: center;
+        padding: 12px 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 4px solid var(--logo-gold);
+    }
+
+    .brand-area {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo-container {
+        background: white;
+        padding: 4px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    .logo-img {
+        height: 40px;
+        width: auto;
     }
 
     header h1 {
         margin: 0;
-        font-size: 40px;
+        font-size: 20px;
         font-weight: 700;
+        letter-spacing: -0.3px;
     }
 
-    header p {
-        margin-top: 10px;
-        font-size: 18px;
-        opacity: 0.9;
-    }
-
+    /* --- SLEEK NAV BAR (Midnight Slate) --- */
     nav {
-        background: #800000;
-        padding: 12px 20px;
-        text-align: center;
+        background: var(--midnight-slate);
+        padding: 0 5%;
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
     nav a {
-        color: white;
-        margin: 0 18px;
+        color: #ced4da;
+        padding: 14px 20px;
         text-decoration: none;
         font-weight: 600;
-        font-size: 16px;
+        font-size: 13px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
     }
 
     nav a:hover {
-        text-decoration: underline;
+        color: var(--logo-gold);
+        background: rgba(255, 255, 255, 0.05);
     }
 
-    .filters {
+    nav a.active {
+        color: white;
+        border-bottom: 3px solid var(--logo-gold);
+    }
+
+    /* --- FILTERS --- */
+    .filter-bar {
+        background: white;
+        padding: 18px 5%;
         display: flex;
         flex-wrap: wrap;
-        gap: 15px;
-        padding: 20px;
-        background: white;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        position: sticky;
-        top: 0;
-        z-index: 10;
+        gap: 12px;
+        border-bottom: 1px solid #edf2f7;
     }
 
-    .filters input, .filters select {
-        padding: 10px;
-        font-size: 15px;
-        border: 1px solid #ccc;
+    .filter-bar input, .filter-bar select {
+        padding: 10px 15px;
+        border: 2px solid #edf2f7;
         border-radius: 6px;
+        font-family: inherit;
         flex: 1;
-        min-width: 200px;
+        min-width: 180px;
+        outline: none;
+        transition: border-color 0.3s;
     }
 
+    .filter-bar input:focus {
+        border-color: var(--logo-blue);
+    }
+
+    /* --- PUBLICATIONS GRID --- */
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
         gap: 20px;
-        padding: 25px;
+        padding: 25px 5%;
     }
 
     .card {
         background: white;
         border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        padding: 22px;
+        border-top: 4px solid var(--logo-blue);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        transition: 0.3s;
         display: flex;
         flex-direction: column;
     }
 
     .card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+        box-shadow: 0 10px 20px rgba(0,51,102,0.1);
+        border-top-color: var(--logo-gold);
     }
 
     .card h3 {
-        margin: 0 0 10px;
-        font-size: 18px;
-        color: #800000;
-    }
-
-    .meta {
-        font-size: 14px;
-        margin-bottom: 10px;
-        color: #555;
+        margin: 0 0 10px 0;
+        font-size: 17px;
+        color: var(--logo-blue);
+        line-height: 1.4;
     }
 
     .card a {
-        color: #0645AD;
+        color: inherit;
         text-decoration: none;
-        font-weight: 600;
     }
 
     .card a:hover {
         text-decoration: underline;
+        color: var(--logo-blue);
+    }
+
+    .meta {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #718096;
+        margin-bottom: 12px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #f7fafc;
+        padding-bottom: 6px;
+    }
+
+    .desc {
+        font-size: 13.5px;
+        color: #4a5568;
     }
 
     footer {
+        background: var(--midnight-slate);
+        color: #a0aec0;
+        padding: 40px 20px;
         text-align: center;
-        padding: 25px;
-        color: #666;
-        font-size: 14px;
+        font-size: 12px;
+        border-top: 4px solid var(--logo-gold);
+    }
+
+    footer strong {
+        color: white;
     }
 </style>
 </head>
 <body>
 
 <header>
-    <h1>Publications, Talks & Media</h1>
-    <p>Complete archive of presentations, papers, podcasts, panels, and more.</p>
+    <div class="brand-area">
+        <div class="logo-container">
+            <img src="images/Sawant_Group_logo.PNG" alt="Sawant Group Logo" class="logo-img">
+        </div>
+        <h1>Publications & Archive</h1>
+    </div>
 </header>
 
 <nav>
@@ -136,12 +209,12 @@
     <a href="Advisory_Services.html">Advisory Services</a>
     <a href="Portfolio.html">Portfolio</a>
     <a href="Leadership.html">Leadership</a>
-    <a href="Publications.html">Publications</a>
+    <a href="Publications.html" class="active">Publications</a>
     <a href="Resources.html">Resources</a>
 </nav>
 
-<div class="filters">
-    <input type="text" id="search" placeholder="Search by title, description, or author…">
+<div class="filter-bar">
+    <input type="text" id="search" placeholder="Search titles, authors, or topics...">
     <select id="categoryFilter">
         <option value="">All Categories</option>
     </select>
@@ -153,9 +226,6 @@
 <div class="grid" id="cardGrid"></div>
 
 <script>
-/* -----------------------------
-   DATASET (Full 76 items)
---------------------------------*/
 const items = [
     {no:76,cat:"Presentation",year:2025,title:"AI-powered Predictive Care: From Reactive Treatment to Proactive Health Management",link:"https://www.linkedin.com/events/virtualsummit-globalhealthtechs7383888552754888704/",authors:"Sawant, Amit",desc:"Health Tech 2025-2026 Summit"},
     {no:75,cat:"Presentation",year:2025,title:"The Intelligent Edge: Harnessing AI to Unlock the Next Frontier in Real Estate Value",link:"https://drive.google.com/file/d/11LxLVgtM8PyI96n5pPXL6wE3XYc7qr9M",authors:"Sawant, Amit",desc:"Reshaped 2025 by NCCIQ: AI x Real Estate"},
@@ -235,82 +305,62 @@ const items = [
     {no:1,cat:"Blog",year:2020,title:"GCP Cloud Platform Updates",link:"https://medium.com/whats-next-for-cloud-service-providers/whats-new-with-google-cloud-platform-3852e3b3842a",authors:"Sawant, Amit",desc:""}
 ];
 
-/* -----------------------------
-   BUILD FILTER OPTIONS
---------------------------------*/
 function populateFilters() {
     const categorySet = new Set();
     const yearSet = new Set();
-
     items.forEach(item => {
         if (item.cat) categorySet.add(item.cat.trim());
         if (item.year) yearSet.add(item.year);
     });
 
-    const categoryFilter = document.getElementById("categoryFilter");
-    const yearFilter = document.getElementById("yearFilter");
+    const catF = document.getElementById("categoryFilter");
+    const yearF = document.getElementById("yearFilter");
 
-    // Populate Unique Categories (Alphabetical)
     [...categorySet].sort().forEach(cat => {
         const opt = document.createElement("option");
-        opt.value = cat;
-        opt.textContent = cat;
-        categoryFilter.appendChild(opt);
+        opt.value = cat; opt.textContent = cat;
+        catF.appendChild(opt);
     });
 
-    // Populate Years (Descending)
     [...yearSet].sort((a,b)=>b-a).forEach(year => {
         const opt = document.createElement("option");
-        opt.value = year;
-        opt.textContent = year;
-        yearFilter.appendChild(opt);
+        opt.value = year; opt.textContent = year;
+        yearF.appendChild(opt);
     });
 }
 
-/* -----------------------------
-   RENDER CARDS
---------------------------------*/
 function renderCards(data) {
     const grid = document.getElementById("cardGrid");
     grid.innerHTML = "";
-    
     data.forEach(item => {
         const card = document.createElement("div");
         card.className = "card";
-        const titleHTML = item.link 
-            ? `<a href="${item.link}" target="_blank">${item.title}</a>` 
-            : item.title;
-
+        const titleHTML = item.link ? `<a href="${item.link}" target="_blank">${item.title}</a>` : item.title;
         card.innerHTML = `
-            <h3>${titleHTML}</h3>
             <div class="meta">
-                <strong>${item.cat}</strong> • ${item.year}<br>
-                <em>${item.authors}</em>
+                <span>${item.cat}</span>
+                <span>${item.year}</span>
             </div>
-            <p>${item.desc || ""}</p>
+            <h3>${titleHTML}</h3>
+            <div class="desc">${item.desc || "<em>" + (item.authors || "") + "</em>"}</div>
         `;
         grid.appendChild(card);
     });
 }
 
-/* -----------------------------
-   FILTER + SEARCH LOGIC
---------------------------------*/
 function applyFilters() {
-    const searchText = document.getElementById("search").value.toLowerCase();
-    const category = document.getElementById("categoryFilter").value;
+    const search = document.getElementById("search").value.toLowerCase();
+    const cat = document.getElementById("categoryFilter").value;
     const year = document.getElementById("yearFilter").value;
 
-    const filtered = items.filter(item => {
-        const matchesSearch = 
-            item.title.toLowerCase().includes(searchText) || 
-            item.authors.toLowerCase().includes(searchText) ||
-            item.desc.toLowerCase().includes(searchText);
-        const matchesCategory = category ? item.cat === category : true;
-        const matchesYear = year ? item.year.toString() === year : true;
-        return matchesSearch && matchesCategory && matchesYear;
+    const filtered = items.filter(i => {
+        const matchesSearch = i.title.toLowerCase().includes(search) || 
+                              (i.desc && i.desc.toLowerCase().includes(search)) ||
+                              (i.authors && i.authors.toLowerCase().includes(search));
+        const matchesCat = cat ? i.cat === cat : true;
+        const matchesYear = year ? i.year.toString() === year : true;
+        return matchesSearch && matchesCat && matchesYear;
     });
-
     renderCards(filtered);
 }
 
@@ -323,7 +373,7 @@ renderCards(items);
 </script>
 
 <footer>
-    © Amit Sawant — Publications Archive
+    © Dr. Amit Sawant - Webpage
 </footer>
 
 </body>
