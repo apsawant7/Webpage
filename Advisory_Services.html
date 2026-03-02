@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Dr. Amit Sawant – Advisory Services</title>
+<title>Dr. Amit Sawant – Webpage</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -94,12 +94,12 @@
         border-bottom: 3px solid var(--logo-gold);
     }
 
-    /* --- CONTENT AREA (Spacing matched to index.html) --- */
+    /* --- CONTENT AREA --- */
     .container {
         max-width: 1000px;
         margin: 40px auto;
         background: white;
-        padding: 40px; /* Internal spacing from edge to first letter */
+        padding: 40px;
         border-radius: 12px;
         box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
@@ -131,12 +131,31 @@
         text-decoration: underline;
     }
 
+    /* --- SOCIAL MEDIA TABLE --- */
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 10px;
+        text-align: center;
+    }
+
     img {
         max-width: 100%;
         height: auto;
         border-radius: 8px;
-        display: block;
-        margin: 20px 0; /* Aligned left with text */
+    }
+
+    .social-link img {
+        transition: transform 0.2s;
+        border-radius: 4px;
+    }
+
+    .social-link img:hover {
+        transform: scale(1.1);
     }
 
     footer {
@@ -160,7 +179,7 @@
         <div class="logo-container">
             <img src="images/Sawant_Group_logo.PNG" alt="Sawant Group Logo" class="logo-img">
         </div>
-        <h1>Dr. Amit Sawant</h1>
+        <h1>Advisory Services</h1>
     </div>
 </header>
 
